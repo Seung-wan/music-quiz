@@ -35,16 +35,17 @@ const Quiz = ({ songList }: Props) => {
     setSong(songList[count])
   }, [count, songList])
 
-  if (songList.length === 0) return <div>이미지를 선택해주세요.</div>
-  if (count === 10) return <div>종료되었습니다.</div>
+  if (songList.length === 0) return <div className={styles.alertMessage}>카테고리를 선택해주세요.</div>
+  if (count === 10) return <div className={styles.alertMessage}>종료되었습니다.</div>
 
   return (
     <div className={styles.container}>
-      <h2>{count} / 10</h2>
+      <h2>남은 노래: {10 - count} / 10</h2>
 
-      <audio controls autoPlay src={song} />
+      <audio controls autoPlay src={song} controlsList='nodownload' />
       <form onSubmit={handleSubmit}>
-        <input type='text' value={title} onChange={handleChangeTitle} />
+        <label htmlFor='title'>제목: </label>
+        <input type='text' id='title' value={title} onChange={handleChangeTitle} />
         <button type='submit'>입력</button>
       </form>
       {correct && <div>정답입니다.</div>}
