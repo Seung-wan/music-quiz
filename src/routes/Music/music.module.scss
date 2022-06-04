@@ -1,0 +1,13 @@
+.container {
+  width: 360px;
+  height: 720px;
+  // background-color: #070b11;
+  background-color: white;
+  border-radius: 32px;
+
+  .cardContainer {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    place-items: center;
+  }
+}
