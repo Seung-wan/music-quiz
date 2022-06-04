@@ -1,22 +1,26 @@
-import styles from './card.module.scss'
 import { MouseEvent } from 'react'
 
+import styles from './card.module.scss'
+
 interface Props {
+  categoryTitle: string
   image: string
   setCategory: (category: string) => void
 }
 
-const Card = ({ image, setCategory }: Props) => {
+const Card = ({ categoryTitle, image, setCategory }: Props) => {
   const clickHandler = (evt: MouseEvent<HTMLButtonElement>) => {
     const { title } = evt.currentTarget.dataset
     const convertTitle = title?.slice(14).match(/^i\d+/i)
-    console.log(convertTitle)
     if (convertTitle) setCategory(convertTitle[0])
   }
   return (
-    <button type='button' data-title={image} onClick={clickHandler}>
-      <img className={styles.image} src={image} alt='singer' />
-    </button>
+    <div className={styles.container}>
+      <h2>{categoryTitle}</h2>
+      <button type='button' data-title={image} onClick={clickHandler}>
+        <img className={styles.image} src={image} alt='singer' />
+      </button>
+    </div>
   )
 }
 

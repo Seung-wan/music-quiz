@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <header className={styles.container}>
       <MenuIcon />
-      <div>노래 맞추기</div>
+      <h1>노래 맞추기</h1>
       <OptionIcon />
     </header>
   )

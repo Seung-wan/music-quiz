@@ -4,7 +4,10 @@
   display: flex;
   justify-content: space-between;
   padding: 16px;
-  // color: colors.$WHITE;
+
+  h1 {
+    font-size: 24px;
+  }
 
   svg {
     width: 20px;

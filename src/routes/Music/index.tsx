@@ -61,7 +61,6 @@ import {
 } from 'assets'
 import { useEffect, useState } from 'react'
 
-// 2020, 2010, 2000, 1990
 const s2020 = [
   늦은밤너의집앞골목길에서,
   블루밍,
@@ -108,12 +107,13 @@ const Music = () => {
   return (
     <div className={styles.container}>
       <Header />
+      <h2>카테고리</h2>
       <div className={styles.cardContainer}>
-        <Card image={i1990} setCategory={setCategory} />
-        <Card image={i2000} setCategory={setCategory} />
-        <Card image={i2010} setCategory={setCategory} />
-        <Card image={i2020} setCategory={setCategory} />
-        <Card image={i1997} setCategory={setCategory} />
+        <Card categoryTitle='1990년대' image={i1990} setCategory={setCategory} />
+        <Card categoryTitle='2000년대' image={i2000} setCategory={setCategory} />
+        <Card categoryTitle='2010년대' image={i2010} setCategory={setCategory} />
+        <Card categoryTitle='2020년대' image={i2020} setCategory={setCategory} />
+        <Card categoryTitle='제작자 취향' image={i1997} setCategory={setCategory} />
       </div>
       <Quiz songList={songList} />
     </div>
