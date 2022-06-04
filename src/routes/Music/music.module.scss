@@ -1,13 +1,19 @@
 .container {
   width: 360px;
   height: 720px;
-  // background-color: #070b11;
-  background-color: white;
+  padding: 32px;
+  background-color: #070b11;
   border-radius: 32px;
 
+  h2 {
+    font-size: 20px;
+  }
+
   .cardContainer {
-    display: grid;
-    grid-template-columns: 2fr 2fr;
-    place-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    margin-top: 16px;
+    overflow-y: scroll;
   }
 }
