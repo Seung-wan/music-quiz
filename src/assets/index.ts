@@ -54,11 +54,11 @@ import 이름에게 from './mp3/favorites/이름에게.mp3'
 import 찾았다 from './mp3/favorites/찾았다.mp3'
 import 취중진담 from './mp3/favorites/취중진담.mp3'
 
-import i1990 from './images/i1990.jpeg'
-import i2000 from './images/i2000.jpeg'
-import i2010 from './images/i2010.jpeg'
-import i2020 from './images/i2020.jpeg'
-import i1997 from './images/i1997.jpeg'
+import i1990 from './images/i1990.jpg'
+import i2000 from './images/i2000.jpg'
+import i2010 from './images/i2010.jpg'
+import i2020 from './images/i2020.jpg'
+import i1997 from './images/i1997.jpg'
 
 // 2020
 export {
