@@ -2,16 +2,21 @@
 
 .container {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  padding: 16px;
 
   h1 {
     font-size: 24px;
   }
 
-  svg {
+  button {
     width: 20px;
-    max-height: 20px;
-    fill: colors.$GRAYA;
+    height: 20px;
+
+    svg {
+      width: 20px;
+      max-height: 20px;
+      fill: colors.$GRAYA;
+    }
   }
 }
