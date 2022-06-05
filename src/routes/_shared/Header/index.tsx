@@ -1,12 +1,16 @@
-import { MenuIcon, OptionIcon } from 'assets'
+import { MenuIcon, FilterIcon } from 'assets'
 import styles from './header.module.scss'
 
 const Header = () => {
   return (
     <header className={styles.container}>
-      <MenuIcon />
+      <button type='button'>
+        <MenuIcon />
+      </button>
       <h1>노래 맞추기</h1>
-      <OptionIcon />
+      <button type='button'>
+        <FilterIcon />
+      </button>
     </header>
   )
 }
