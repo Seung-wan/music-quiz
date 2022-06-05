@@ -87,4 +87,4 @@ export { i1990, i2000, i2010, i2020, i1997 }
 
 // svgs
 export { ReactComponent as MenuIcon } from './svgs/menu.svg'
-export { ReactComponent as OptionIcon } from './svgs/option.svg'
+export { ReactComponent as FilterIcon } from './svgs/filter.svg'
