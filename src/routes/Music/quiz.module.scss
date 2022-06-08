@@ -13,8 +13,22 @@
   margin-top: 16px;
 
   .topInnerContainer {
-    .countMessage {
-      margin: 0;
+    .buttonWrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .countMessage {
+        margin: 0;
+      }
+
+      button {
+        width: 48px;
+        height: 36px;
+        margin-left: 16px;
+        background: colors.$WHITE;
+        border-radius: 24px;
+      }
     }
 
     audio {
