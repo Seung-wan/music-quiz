@@ -1,11 +1,12 @@
 import { useState } from 'react'
 
+import useSongList from 'hooks/useSongList'
+
 import Header from 'routes/_shared/Header'
 import CardList from './CardList'
 import Quiz from './Quiz'
 
 import styles from './music.module.scss'
-import useSongList from 'hooks/useSongList'
 
 const Music = () => {
   const [category, setCategory] = useState('')
