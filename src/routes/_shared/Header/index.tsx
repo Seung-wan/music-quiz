@@ -1,4 +1,5 @@
 import { MenuIcon, FilterIcon } from 'assets'
+
 import styles from './header.module.scss'
 
 const Header = () => {

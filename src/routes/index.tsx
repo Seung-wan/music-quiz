@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom'
+
 import Music from './Music'
 import styles from './routes.module.scss'
 
