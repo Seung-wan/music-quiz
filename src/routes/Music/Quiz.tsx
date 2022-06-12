@@ -20,6 +20,13 @@ const Quiz = ({ songList }: Props) => {
     setTitle(evt.currentTarget.value)
   }
 
+  const handleClickSkip = () => {
+    setCount((prev) => prev + 1)
+    setCorrect(false)
+    setWrong(false)
+    setTitle('')
+  }
+
   const handleSubmit = (evt: FormEvent<HTMLFormElement>) => {
     evt.preventDefault()
     setCorrect(false)
@@ -48,7 +55,12 @@ const Quiz = ({ songList }: Props) => {
   return (
     <div className={styles.container}>
       <div className={styles.topInnerContainer}>
-        <h2 className={styles.countMessage}>남은 노래: {10 - count} / 10</h2>
+        <div className={styles.buttonWrapper}>
+          <h2 className={styles.countMessage}>남은 노래: {10 - count} / 10</h2>
+          <button type='button' onClick={handleClickSkip}>
+            Skip
+          </button>
+        </div>
         <audio controls autoPlay src={song} controlsList='nodownload'>
           <track default kind='captions' srcLang='ko' />
         </audio>
