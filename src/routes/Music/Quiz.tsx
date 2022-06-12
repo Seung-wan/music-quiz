@@ -2,6 +2,7 @@ import { useState, ChangeEvent, FormEvent, useEffect } from 'react'
 import { useRecoilState } from 'recoil'
 
 import { correctState, wrongState, countState } from '../recoil/music'
+
 import styles from './quiz.module.scss'
 
 interface Props {
@@ -9,12 +10,12 @@ interface Props {
 }
 
 const Quiz = ({ songList }: Props) => {
+  const [count, setCount] = useRecoilState(countState)
   const [correct, setCorrect] = useRecoilState(correctState)
   const [wrong, setWrong] = useRecoilState(wrongState)
-  const [count, setCount] = useRecoilState(countState)
 
   const [title, setTitle] = useState('')
-  const [song, setSong] = useState('')
+  const [currentSong, setCurrentSong] = useState('')
 
   const handleChangeTitle = (evt: ChangeEvent<HTMLInputElement>) => {
     setTitle(evt.currentTarget.value)
@@ -29,10 +30,11 @@ const Quiz = ({ songList }: Props) => {
 
   const handleSubmit = (evt: FormEvent<HTMLFormElement>) => {
     evt.preventDefault()
+
     setCorrect(false)
     setWrong(false)
 
-    const convertSong = song.slice(14).match(/^[가-힣|a-z]+/i)
+    const convertSong = currentSong.slice(14).match(/^[가-힣|a-z]+/i)
     const answer = convertSong && convertSong[0]
 
     if (title === answer) {
@@ -46,7 +48,7 @@ const Quiz = ({ songList }: Props) => {
   }
 
   useEffect(() => {
-    setSong(songList[count])
+    setCurrentSong(songList[count])
   }, [count, songList])
 
   if (songList.length === 0) return <div className={styles.alertMessage}>카테고리를 선택해주세요.</div>
@@ -61,7 +63,7 @@ const Quiz = ({ songList }: Props) => {
             Skip
           </button>
         </div>
-        <audio controls autoPlay src={song} controlsList='nodownload'>
+        <audio controls autoPlay src={currentSong} controlsList='nodownload'>
           <track default kind='captions' srcLang='ko' />
         </audio>
       </div>
