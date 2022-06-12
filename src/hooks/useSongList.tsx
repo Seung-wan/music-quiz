@@ -7,17 +7,17 @@ const useSongList = (category: string) => {
 
   useEffect(() => {
     switch (category) {
-      case 'i1990':
-        setSongList(s1990)
-        break
-      case 'i2000':
-        setSongList(s2000)
+      case 'i2020':
+        setSongList(s2020)
         break
       case 'i2010':
         setSongList(s2010)
         break
-      case 'i2020':
-        setSongList(s2020)
+      case 'i2000':
+        setSongList(s2000)
+        break
+      case 'i1990':
+        setSongList(s1990)
         break
       case 'i1997':
         setSongList(s1997)
