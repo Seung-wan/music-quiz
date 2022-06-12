@@ -1,0 +1,8 @@
+{
+  "jsxSingleQuote": true,
+  "semi": false,
+  "printWidth": 110,
+  "proseWrap": "never",
+  "singleQuote": true,
+  "htmlWhitespaceSensitivity": "css"
+}
